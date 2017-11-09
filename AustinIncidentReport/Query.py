@@ -6,9 +6,14 @@
 
 import pandas as pd
 import requests
+import numpy as np
+import json
 
 response = requests.get("https://data.austintexas.gov/resource/rkrg-9tez.json")
 data = response.json()
 
-print(data)
+# print(data)
 print(response.status_code)
+
+df = pd.DataFrame(data)
+print(df.columns)
