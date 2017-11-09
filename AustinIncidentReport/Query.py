@@ -8,4 +8,7 @@ import pandas as pd
 import requests
 
 response = requests.get("https://data.austintexas.gov/resource/rkrg-9tez.json")
+data = response.json()
+
+print(data)
 print(response.status_code)
